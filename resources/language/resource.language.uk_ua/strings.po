@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
+"Language: uk_Ua\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 msgctxt "#32001"
@@ -19,55 +19,55 @@ msgstr ""
 
 msgctxt "#32002"
 msgid "Size"
-msgstr "TamaГ±o"
+msgstr "Розмір"
 
 msgctxt "#32003"
 msgid "Received"
-msgstr "Recibido"
+msgstr "Отримали"
 
 msgctxt "#32004"
 msgid "Downloading"
-msgstr "Descargando"
+msgstr "Завантаження"
 
 msgctxt "#32005"
 msgid "Use Default?"
-msgstr "Para la descarga"
+msgstr "За замовчуванням?"
 
 msgctxt "#32006"
 msgid "Use default path:"
-msgstr "ВїDesea usar el directorio por defecto:"
+msgstr "Використовувати шлях за умовч .:"
 
 msgctxt "#32007"
 msgid "Or choose a new path?"
-msgstr "o seleccionar un nuevo directorio?"
+msgstr "Або вибрати новий шлях?"
 
 msgctxt "#32008"
 msgid "Default"
-msgstr "Por defecto"
+msgstr "За замовчуванням"
 
 msgctxt "#32009"
 msgid "New"
-msgstr "Nuevo"
+msgstr "Новий"
 
 msgctxt "#32010"
 msgid "Select Directory"
-msgstr "Seleccione un nuevo directorio"
+msgstr "Вибрати папку"
 
 msgctxt "#32011"
 msgid "Done"
-msgstr "Hecho"
+msgstr "Виконано"
 
 msgctxt "#32012"
 msgid "Download Complete"
-msgstr "Descarga Completada"
+msgstr "загрузка завершена"
 
 msgctxt "#32013"
 msgid "Download Failed"
-msgstr "Error: Descarga Fallida"
+msgstr "Завантаження не вдалася"
 
 msgctxt "#32014"
 msgid "SD Only"
-msgstr "Solo SD"
+msgstr "тільки SD"
 
 msgctxt "#32015"
 msgid "720p"
@@ -79,88 +79,116 @@ msgstr ""
 
 msgctxt "#32017"
 msgid "Max Streaming Video Quality"
-msgstr "Calidad mГЎxima de video"
+msgstr "Макс. якість потокового відео"
 
 msgctxt "#32018"
 msgid "Disable DASH Video (Recommended)"
-msgstr "Deshabilitar Video DASH (recomendado)"
+msgstr "Відключити DASH-відео (рекомендується)"
 
 msgctxt "#32019"
 msgid "Main"
-msgstr "General"
+msgstr "Основний"
 
 msgctxt "#32020"
 msgid "Advanced"
-msgstr "Avanzado"
+msgstr "Продвинутий"
 
 msgctxt "#32021"
 msgid "Use user updated youtube-dl core version"
-msgstr "Usar versiГіn de nГєcleo youtube-dl actualizada por el usuario"
+msgstr "Використовувати оновлену користувачем версію ядра youtube-dl."
 
 msgctxt "#32022"
 msgid "Update automatically"
-msgstr "Actualizar automГЎticamente"
+msgstr "Оновлювати автоматично"
 
 msgctxt "#32023"
 msgid "Update now"
-msgstr "Actualizar ahora"
+msgstr "Оновити зараз"
 
 msgctxt "#32024"
 msgid "View youtube-dl core info"
-msgstr "InformaciГіn sobre youtube-dl"
+msgstr "Переглянути інформацію про ядро youtube-dl"
 
 msgctxt "#32025"
 msgid "Debug Logging"
-msgstr "Registro de depuraciГіn"
+msgstr "Журнал відладки"
 
 msgctxt "#32026"
 msgid "Highest Available"
-msgstr "MГЎs alta disponible"
+msgstr "Найвищий доступний"
 
 msgctxt "#32027"
 msgid "Enable youtube-dl verbose logging"
-msgstr "Habilitar registro detallado youtube-dl"
+msgstr "Включити докладне ведення журналу youtube-dl"
 
 msgctxt "#32028"
 msgid "Confirm download path"
-msgstr "Solicitar confirmaciГіn para directorio de descarga"
+msgstr "Підтвердіть шлях завантаження"
 
 msgctxt "#32029"
 msgid "Download path"
-msgstr "Directorio de descarga"
+msgstr "Шлях завантаження"
 
 msgctxt "#32030"
 msgid "Stop Current Download"
-msgstr "Detener la descarga actual"
+msgstr "Зупинити поточне завантаження"
 
 msgctxt "#32031"
 msgid "Stop All Downloads"
-msgstr "Detener todas las descargas"
+msgstr "Зупинити все завантаження"
 
 msgctxt "#32032"
 msgid "Manage Queue"
-msgstr "Gestionar cola de descarga"
+msgstr "Управління чергою"
 
 msgctxt "#32033"
 msgid "Download Currently Playing Video"
-msgstr "Descargar video en reproducciГіn"
+msgstr "Завантажити відтворюєме відео"
 
 msgctxt "#32034"
 msgid "Settings"
-msgstr "Ajustes"
+msgstr "Налаштування"
 
 msgctxt "#32035"
 msgid "Message"
-msgstr "Mensaje"
+msgstr "Повідомлення"
 
 msgctxt "#32036"
 msgid "Failed"
-msgstr "Vaya!!! Algo ha fallado"
+msgstr "Не вдалося"
 
 msgctxt "#32037"
 msgid "Failed to move to downloads folder - leaving in temp"
-msgstr "Error al mover al directorio de descargas - dejando en temporal"
+msgstr "Не вдалося перемістити в папку завантажень - залишив в temp"
 
 msgctxt "#32038"
 msgid "Skip Videos Without Audio"
-msgstr "Saltar videos sin audio"
+msgstr "Пропустити відео без аудіо"
+
+msgctxt "#32039"
+msgid "Cancel Download"
+msgstr "Скасувати завантаження"
+
+msgctxt "#32040"
+msgid "Cancel current download?"
+msgstr "Скасувати поточне завантаження?"
+
+msgctxt "#32041"
+msgid "Cancel Downloads"
+msgstr "Скасування завантажень"
+
+msgctxt "#32042"
+msgid "Cancel current download and all queued downloads?"
+msgstr "Скасувати поточне завантаження і все завантаження в черзі?"
+
+msgctxt "#32043"
+msgid "Addon version: {0}"
+msgstr "Версія доповнення: {0}"
+
+msgctxt "#32044"
+msgid "Core version: {0}"
+msgstr "Версія ядра: {0}"
+
+msgctxt "#32045"
+msgid "Info"
+msgstr "Інфо"

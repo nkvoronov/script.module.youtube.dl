@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
+"Language: ru_RU\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 msgctxt "#32001"
@@ -19,55 +19,55 @@ msgstr ""
 
 msgctxt "#32002"
 msgid "Size"
-msgstr ""
+msgstr "Размер"
 
 msgctxt "#32003"
 msgid "Received"
-msgstr ""
+msgstr "Получили"
 
 msgctxt "#32004"
 msgid "Downloading"
-msgstr ""
+msgstr "Загрузка"
 
 msgctxt "#32005"
 msgid "Use Default?"
-msgstr ""
+msgstr "По умолчанию?"
 
 msgctxt "#32006"
 msgid "Use default path:"
-msgstr ""
+msgstr "Использовать путь по умолч.:"
 
 msgctxt "#32007"
 msgid "Or choose a new path?"
-msgstr ""
+msgstr "Или выбрать новый путь?"
 
 msgctxt "#32008"
 msgid "Default"
-msgstr ""
+msgstr "По умолчанию"
 
 msgctxt "#32009"
 msgid "New"
-msgstr ""
+msgstr "Новый"
 
 msgctxt "#32010"
 msgid "Select Directory"
-msgstr ""
+msgstr "Выбрать папку"
 
 msgctxt "#32011"
 msgid "Done"
-msgstr ""
+msgstr "Выполнено"
 
 msgctxt "#32012"
 msgid "Download Complete"
-msgstr ""
+msgstr "Загрузка завершена"
 
 msgctxt "#32013"
 msgid "Download Failed"
-msgstr ""
+msgstr "Загрузка не удалась"
 
 msgctxt "#32014"
 msgid "SD Only"
-msgstr ""
+msgstr "только SD"
 
 msgctxt "#32015"
 msgid "720p"
@@ -79,116 +79,116 @@ msgstr ""
 
 msgctxt "#32017"
 msgid "Max Streaming Video Quality"
-msgstr ""
+msgstr "Макс. качество потокового видео"
 
 msgctxt "#32018"
 msgid "Disable DASH Video (Recommended)"
-msgstr ""
+msgstr "Отключить DASH-видео (рекомендуется)"
 
 msgctxt "#32019"
 msgid "Main"
-msgstr ""
+msgstr "Основной"
 
 msgctxt "#32020"
 msgid "Advanced"
-msgstr ""
+msgstr "Продвинутый"
 
 msgctxt "#32021"
 msgid "Use user updated youtube-dl core version"
-msgstr ""
+msgstr "Использовать обновленную пользователем версию ядра youtube-dl."
 
 msgctxt "#32022"
 msgid "Update automatically"
-msgstr ""
+msgstr "Обновлять автоматически"
 
 msgctxt "#32023"
 msgid "Update now"
-msgstr ""
+msgstr "Обновить сейчас"
 
 msgctxt "#32024"
 msgid "View youtube-dl core info"
-msgstr ""
+msgstr "Просмотреть информацию о ядре youtube-dl"
 
 msgctxt "#32025"
 msgid "Debug Logging"
-msgstr ""
+msgstr "Журнала отладки"
 
 msgctxt "#32026"
 msgid "Highest Available"
-msgstr ""
+msgstr "Самый высокий доступный"
 
 msgctxt "#32027"
 msgid "Enable youtube-dl verbose logging"
-msgstr ""
+msgstr "Включить подробное ведение журнала youtube-dl"
 
 msgctxt "#32028"
 msgid "Confirm download path"
-msgstr ""
+msgstr "Подтвердите путь загрузки"
 
 msgctxt "#32029"
 msgid "Download path"
-msgstr ""
+msgstr "Путь загрузки"
 
 msgctxt "#32030"
 msgid "Stop Current Download"
-msgstr ""
+msgstr "Остановить текущую загрузку"
 
 msgctxt "#32031"
 msgid "Stop All Downloads"
-msgstr ""
+msgstr "Остановить все загрузки"
 
 msgctxt "#32032"
 msgid "Manage Queue"
-msgstr ""
+msgstr "Управление очередью"
 
 msgctxt "#32033"
 msgid "Download Currently Playing Video"
-msgstr ""
+msgstr "Скачать воспроизводимое видео"
 
 msgctxt "#32034"
 msgid "Settings"
-msgstr ""
+msgstr "Настройки"
 
 msgctxt "#32035"
 msgid "Message"
-msgstr ""
+msgstr "Сообщение"
 
 msgctxt "#32036"
 msgid "Failed"
-msgstr ""
+msgstr "Не удалось"
 
 msgctxt "#32037"
 msgid "Failed to move to downloads folder - leaving in temp"
-msgstr ""
+msgstr "Не удалось переместить в папку загрузок - оставил в temp"
 
 msgctxt "#32038"
 msgid "Skip Videos Without Audio"
-msgstr ""
+msgstr "Пропустить видео без аудио"
 
 msgctxt "#32039"
 msgid "Cancel Download"
-msgstr ""
+msgstr "Отменить загрузку"
 
 msgctxt "#32040"
 msgid "Cancel current download?"
-msgstr ""
+msgstr "Отменить текущую загрузку?"
 
 msgctxt "#32041"
 msgid "Cancel Downloads"
-msgstr ""
+msgstr "Отмена загрузок"
 
 msgctxt "#32042"
 msgid "Cancel current download and all queued downloads?"
-msgstr ""
+msgstr "Отменить текущую загрузку и все загрузки в очереди?"
 
 msgctxt "#32043"
 msgid "Addon version: {0}"
-msgstr ""
+msgstr "Версия дополнения: {0}"
 
 msgctxt "#32044"
 msgid "Core version: {0}"
-msgstr ""
+msgstr "Версия ядра: {0}"
 
 msgctxt "#32045"
 msgid "Info"
-msgstr ""
+msgstr "Инфо"
