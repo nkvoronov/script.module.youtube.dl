@@ -963,7 +963,10 @@ from .savefrom import SaveFromIE
 from .sbs import SBSIE
 from .screencast import ScreencastIE
 from .screencastomatic import ScreencastOMaticIE
-from .scrippsnetworks import ScrippsNetworksWatchIE
+from .scrippsnetworks import (
+    ScrippsNetworksWatchIE,
+    ScrippsNetworksIE,
+)
 from .scte import (
     SCTEIE,
     SCTECourseIE,
@@ -1168,7 +1171,10 @@ from .tv2 import (
     TV2ArticleIE,
     KatsomoIE,
 )
-from .tv2dk import TV2DKIE
+from .tv2dk import (
+    TV2DKIE,
+    TV2DKBornholmPlayIE,
+)
 from .tv2hu import TV2HuIE
 from .tv4 import TV4IE
 from .tv5mondeplus import TV5MondePlusIE
