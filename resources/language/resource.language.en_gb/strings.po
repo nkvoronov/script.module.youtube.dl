@@ -1,9 +1,13 @@
 # XBMC Media Center language file
+# Addon Name: youtube-dl Control
+# Addon id: script.module.youtube.dl
+# Addon version: 20.0.0
+# Addon Provider: Rick Phillips (ruuk), YLLOW_DRAGON
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC-Addons\n"
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
-"POT-Creation-Date: 2013-12-12 22:56+0000\n"
+"POT-Creation-Date: 2014-10-26 17:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE\n"
