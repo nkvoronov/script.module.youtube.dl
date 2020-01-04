@@ -1,16 +1,20 @@
 # XBMC Media Center language file
+# Addon Name: youtube-dl Control
+# Addon id: script.module.youtube.dl
+# Addon version: 20.0.0
+# Addon Provider: Rick Phillips (ruuk), YLLOW_DRAGON
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC-Addons\n"
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
-"POT-Creation-Date: 2013-12-12 22:56+0000\n"
+"POT-Creation-Date: 2014-10-26 17:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: uk_Ua\n"
+"Language: uk_UA\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 msgctxt "#32001"
@@ -19,55 +23,55 @@ msgstr ""
 
 msgctxt "#32002"
 msgid "Size"
-msgstr "Розмір"
+msgstr "Р РѕР·РјС–СЂ"
 
 msgctxt "#32003"
 msgid "Received"
-msgstr "Отримали"
+msgstr "РћС‚СЂРёРјР°Р»Рё"
 
 msgctxt "#32004"
 msgid "Downloading"
-msgstr "Завантаження"
+msgstr "Р—Р°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ"
 
 msgctxt "#32005"
 msgid "Use Default?"
-msgstr "За замовчуванням?"
+msgstr "Р—Р° Р·Р°РјРѕРІС‡СѓРІР°РЅРЅСЏРј?"
 
 msgctxt "#32006"
 msgid "Use default path:"
-msgstr "Використовувати шлях за умовч .:"
+msgstr "Р’РёРєРѕСЂРёСЃС‚РѕРІСѓРІР°С‚Рё С€Р»СЏС… Р·Р° СѓРјРѕРІС‡ .:"
 
 msgctxt "#32007"
 msgid "Or choose a new path?"
-msgstr "Або вибрати новий шлях?"
+msgstr "РђР±Рѕ РІРёР±СЂР°С‚Рё РЅРѕРІРёР№ С€Р»СЏС…?"
 
 msgctxt "#32008"
 msgid "Default"
-msgstr "За замовчуванням"
+msgstr "Р—Р° Р·Р°РјРѕРІС‡СѓРІР°РЅРЅСЏРј"
 
 msgctxt "#32009"
 msgid "New"
-msgstr "Новий"
+msgstr "РќРѕРІРёР№"
 
 msgctxt "#32010"
 msgid "Select Directory"
-msgstr "Вибрати папку"
+msgstr "Р’РёР±СЂР°С‚Рё РїР°РїРєСѓ"
 
 msgctxt "#32011"
 msgid "Done"
-msgstr "Виконано"
+msgstr "Р’РёРєРѕРЅР°РЅРѕ"
 
 msgctxt "#32012"
 msgid "Download Complete"
-msgstr "загрузка завершена"
+msgstr "Р·Р°РіСЂСѓР·РєР° Р·Р°РІРµСЂС€РµРЅР°"
 
 msgctxt "#32013"
 msgid "Download Failed"
-msgstr "Завантаження не вдалася"
+msgstr "Р—Р°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ РЅРµ РІРґР°Р»Р°СЃСЏ"
 
 msgctxt "#32014"
 msgid "SD Only"
-msgstr "тільки SD"
+msgstr "С‚С–Р»СЊРєРё SD"
 
 msgctxt "#32015"
 msgid "720p"
@@ -79,116 +83,116 @@ msgstr ""
 
 msgctxt "#32017"
 msgid "Max Streaming Video Quality"
-msgstr "Макс. якість потокового відео"
+msgstr "РњР°РєСЃ. СЏРєС–СЃС‚СЊ РїРѕС‚РѕРєРѕРІРѕРіРѕ РІС–РґРµРѕ"
 
 msgctxt "#32018"
 msgid "Disable DASH Video (Recommended)"
-msgstr "Відключити DASH-відео (рекомендується)"
+msgstr "Р’С–РґРєР»СЋС‡РёС‚Рё DASH-РІС–РґРµРѕ (СЂРµРєРѕРјРµРЅРґСѓС”С‚СЊСЃСЏ)"
 
 msgctxt "#32019"
 msgid "Main"
-msgstr "Основний"
+msgstr "РћСЃРЅРѕРІРЅРёР№"
 
 msgctxt "#32020"
 msgid "Advanced"
-msgstr "Продвинутий"
+msgstr "РџСЂРѕРґРІРёРЅСѓС‚РёР№"
 
 msgctxt "#32021"
 msgid "Use user updated youtube-dl core version"
-msgstr "Використовувати оновлену користувачем версію ядра youtube-dl."
+msgstr "Р’РёРєРѕСЂРёСЃС‚РѕРІСѓРІР°С‚Рё РѕРЅРѕРІР»РµРЅСѓ РєРѕСЂРёСЃС‚СѓРІР°С‡РµРј РІРµСЂСЃС–СЋ СЏРґСЂР° youtube-dl."
 
 msgctxt "#32022"
 msgid "Update automatically"
-msgstr "Оновлювати автоматично"
+msgstr "РћРЅРѕРІР»СЋРІР°С‚Рё Р°РІС‚РѕРјР°С‚РёС‡РЅРѕ"
 
 msgctxt "#32023"
 msgid "Update now"
-msgstr "Оновити зараз"
+msgstr "РћРЅРѕРІРёС‚Рё Р·Р°СЂР°Р·"
 
 msgctxt "#32024"
 msgid "View youtube-dl core info"
-msgstr "Переглянути інформацію про ядро youtube-dl"
+msgstr "РџРµСЂРµРіР»СЏРЅСѓС‚Рё С–РЅС„РѕСЂРјР°С†С–СЋ РїСЂРѕ СЏРґСЂРѕ youtube-dl"
 
 msgctxt "#32025"
 msgid "Debug Logging"
-msgstr "Журнал відладки"
+msgstr "Р–СѓСЂРЅР°Р» РІС–РґР»Р°РґРєРё"
 
 msgctxt "#32026"
 msgid "Highest Available"
-msgstr "Найвищий доступний"
+msgstr "РќР°Р№РІРёС‰Рµ Р· РґРѕСЃС‚СѓРїРЅРѕРіРѕ"
 
 msgctxt "#32027"
 msgid "Enable youtube-dl verbose logging"
-msgstr "Включити докладне ведення журналу youtube-dl"
+msgstr "Р’РєР»СЋС‡РёС‚Рё РґРѕРєР»Р°РґРЅРµ РІРµРґРµРЅРЅСЏ Р¶СѓСЂРЅР°Р»Сѓ youtube-dl"
 
 msgctxt "#32028"
 msgid "Confirm download path"
-msgstr "Підтвердіть шлях завантаження"
+msgstr "РџС–РґС‚РІРµСЂРґС–С‚СЊ С€Р»СЏС… Р·Р°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ"
 
 msgctxt "#32029"
 msgid "Download path"
-msgstr "Шлях завантаження"
+msgstr "РЁР»СЏС… Р·Р°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ"
 
 msgctxt "#32030"
 msgid "Stop Current Download"
-msgstr "Зупинити поточне завантаження"
+msgstr "Р—СѓРїРёРЅРёС‚Рё РїРѕС‚РѕС‡РЅРµ Р·Р°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ"
 
 msgctxt "#32031"
 msgid "Stop All Downloads"
-msgstr "Зупинити все завантаження"
+msgstr "Р—СѓРїРёРЅРёС‚Рё РІСЃРµ Р·Р°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ"
 
 msgctxt "#32032"
 msgid "Manage Queue"
-msgstr "Управління чергою"
+msgstr "РЈРїСЂР°РІР»С–РЅРЅСЏ С‡РµСЂРіРѕСЋ"
 
 msgctxt "#32033"
 msgid "Download Currently Playing Video"
-msgstr "Завантажити відтворюєме відео"
+msgstr "Р—Р°РІР°РЅС‚Р°Р¶РёС‚Рё РІС–РґС‚РІРѕСЂСЋС”РјРµ РІС–РґРµРѕ"
 
 msgctxt "#32034"
 msgid "Settings"
-msgstr "Налаштування"
+msgstr "РќР°Р»Р°С€С‚СѓРІР°РЅРЅСЏ"
 
 msgctxt "#32035"
 msgid "Message"
-msgstr "Повідомлення"
+msgstr "РџРѕРІС–РґРѕРјР»РµРЅРЅСЏ"
 
 msgctxt "#32036"
 msgid "Failed"
-msgstr "Не вдалося"
+msgstr "РќРµ РІРґР°Р»РѕСЃСЏ"
 
 msgctxt "#32037"
 msgid "Failed to move to downloads folder - leaving in temp"
-msgstr "Не вдалося перемістити в папку завантажень - залишив в temp"
+msgstr "РќРµ РІРґР°Р»РѕСЃСЏ РїРµСЂРµРјС–СЃС‚РёС‚Рё РІ РїР°РїРєСѓ Р·Р°РІР°РЅС‚Р°Р¶РµРЅСЊ - Р·Р°Р»РёС€РёРІ РІ temp"
 
 msgctxt "#32038"
 msgid "Skip Videos Without Audio"
-msgstr "Пропустити відео без аудіо"
+msgstr "РџСЂРѕРїСѓСЃС‚РёС‚Рё РІС–РґРµРѕ Р±РµР· Р°СѓРґС–Рѕ"
 
 msgctxt "#32039"
 msgid "Cancel Download"
-msgstr "Скасувати завантаження"
+msgstr "РЎРєР°СЃСѓРІР°С‚Рё Р·Р°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ"
 
 msgctxt "#32040"
 msgid "Cancel current download?"
-msgstr "Скасувати поточне завантаження?"
+msgstr "РЎРєР°СЃСѓРІР°С‚Рё РїРѕС‚РѕС‡РЅРµ Р·Р°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ?"
 
 msgctxt "#32041"
 msgid "Cancel Downloads"
-msgstr "Скасування завантажень"
+msgstr "РЎРєР°СЃСѓРІР°РЅРЅСЏ Р·Р°РІР°РЅС‚Р°Р¶РµРЅСЊ"
 
 msgctxt "#32042"
 msgid "Cancel current download and all queued downloads?"
-msgstr "Скасувати поточне завантаження і все завантаження в черзі?"
+msgstr "РЎРєР°СЃСѓРІР°С‚Рё РїРѕС‚РѕС‡РЅРµ Р·Р°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ С– РІСЃРµ Р·Р°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ РІ С‡РµСЂР·С–?"
 
 msgctxt "#32043"
 msgid "Addon version: {0}"
-msgstr "Версія доповнення: {0}"
+msgstr "Р’РµСЂСЃС–СЏ РґРѕРїРѕРІРЅРµРЅРЅСЏ: {0}"
 
 msgctxt "#32044"
 msgid "Core version: {0}"
-msgstr "Версія ядра: {0}"
+msgstr "Р’РµСЂСЃС–СЏ СЏРґСЂР°: {0}"
 
 msgctxt "#32045"
 msgid "Info"
-msgstr "Інфо"
+msgstr "Р†РЅС„Рѕ"
