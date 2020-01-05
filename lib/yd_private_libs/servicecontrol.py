@@ -3,8 +3,8 @@ import xbmc
 import os
 import binascii
 import json
-import util
-import jsonqueue
+from yd_private_libs import util
+from yd_private_libs import jsonqueue
 import AddonSignals
 
 IS_WEB = False
@@ -15,16 +15,16 @@ except ImportError:
 
 
 def safeEncode(text):
-    return binascii.hexlify(text.encode('utf-8'))
+    return binascii.hexlify(text)
 
 
 def safeDecode(enc_text):
-    return binascii.unhexlify(enc_text).decode('utf-8')
+    return binascii.unhexlify(enc_text)
 
 
 class ServiceControl(object):
     def download(self, info, path, duration):
-        addonPath = xbmc.translatePath(util.ADDON.getAddonInfo('path')).decode('utf-8')
+        addonPath = xbmc.translatePath(util.ADDON.getAddonInfo('path'))
         service = os.path.join(addonPath, 'service.py')
         data = {'data': info, 'path': path, 'duration': duration}
         dataJSON = json.dumps(data)

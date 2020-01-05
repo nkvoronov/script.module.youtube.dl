@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import sys
-import util
+from yd_private_libs import util
 
 LATEST_URL = 'https://yt-dl.org/latest/youtube-dl.tar.gz'
 VERSION_URL = 'https://yt-dl.org/latest/version'
@@ -10,13 +10,13 @@ def set_youtube_dl_importPath():
     #if not util.getSetting('use_update_version',True): return
     import os
     import xbmc
-    profile = xbmc.translatePath(util.ADDON.getAddonInfo('profile')).decode('utf-8')
+    profile = xbmc.translatePath(util.ADDON.getAddonInfo('profile'))
     youtube_dl_path = os.path.join(profile,'youtube-dl')
     if not os.path.exists(youtube_dl_path): return
     sys.path.insert(0,youtube_dl_path)
 
 def saveVersion(version):
-    import util
+    from yd_private_libs import util
     util.setSetting('core_version',version)
 
 def updateCore(force=False):
@@ -39,7 +39,7 @@ def updateCore(force=False):
 
     util.LOG('Updating youtube_dl core to new version: {0}'.format(newVersion))
 
-    profile = xbmc.translatePath(util.ADDON.getAddonInfo('profile')).decode('utf-8')
+    profile = xbmc.translatePath(util.ADDON.getAddonInfo('profile'))
     archivePath = os.path.join(profile,'youtube_dl.tar.gz')
     extractedPath = os.path.join(profile,'youtube-dl')
 

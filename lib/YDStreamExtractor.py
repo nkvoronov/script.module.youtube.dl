@@ -1,7 +1,7 @@
 import urllib
 import os
-import urlparse
-import httplib
+import urllib.parse as urlparse
+import http.client as httplib
 import time
 import xbmc
 
