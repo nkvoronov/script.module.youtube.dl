@@ -40,12 +40,12 @@ except ImportError:
 try:
     import youtube_dl
 except:
-    util.ERROR('Failed to import youtube-dl')
+    util.ERROR("Failed to import youtube-dl")
     youtube_dl = None
 
 coreVersion = youtube_dl.version.__version__
 updater.saveVersion(coreVersion)
-util.LOG('youtube_dl core version: {0}'.format(coreVersion))
+util.LOG("youtube_dl core version: {0}".format(coreVersion))
 
 ###############################################################################
 # FIXES: datetime.datetime.strptime evaluating as None in Kodi
@@ -204,11 +204,11 @@ class YoutubeDLWrapper(youtube_dl.YoutubeDL):
             try:
                 return _CALLBACK(msg)
             except:
-                util.ERROR('Error in callback. Removing.')
+                util.ERROR("Error in callback. Removing.")
                 _CALLBACK = None
         else:
             if xbmc.abortRequested:
-                raise Exception('abortRequested')
+                raise Exception("abortRequested")
             # print msg.encode('ascii','replace')
         return True
 
@@ -216,10 +216,10 @@ class YoutubeDLWrapper(youtube_dl.YoutubeDL):
         global _DOWNLOAD_CANCEL
         if xbmc.abortRequested or _DOWNLOAD_CANCEL:
             _DOWNLOAD_CANCEL = False
-            raise DownloadCanceledException('abortRequested')
+            raise DownloadCanceledException("abortRequested")
         if _DOWNLOAD_DURATION:
             if time.time() - _DOWNLOAD_START > _DOWNLOAD_DURATION:
-                raise DownloadCanceledException('duration_reached')
+                raise DownloadCanceledException("duration_reached")
         if not _CALLBACK:
             return
         # 'downloaded_bytes': byte_counter,
@@ -229,16 +229,16 @@ class YoutubeDLWrapper(youtube_dl.YoutubeDL):
         # 'status': 'downloading',
         # 'eta': eta,
         # 'speed': speed
-        sofar = info.get('downloaded_bytes')
-        total = info.get('total_bytes') or info.get('total_bytes_estimate')
-        if info.get('filename'):
-            self._lastDownloadedFilePath = info.get('filename')
+        sofar = info.get("downloaded_bytes")
+        total = info.get("total_bytes") or info.get("total_bytes_estimate")
+        if info.get("filename"):
+            self._lastDownloadedFilePath = info.get("filename")
         pct = ''
         pct_val = 0
         eta = None
         if sofar is not None and total:
             pct_val = int((float(sofar) / total) * 100)
-            pct = ' (%s%%)' % pct_val
+            pct = " (%s%%)" % pct_val
         elif _DOWNLOAD_DURATION:
             sofar = time.time() - _DOWNLOAD_START
             eta = _DOWNLOAD_DURATION - sofar
@@ -247,17 +247,17 @@ class YoutubeDLWrapper(youtube_dl.YoutubeDL):
         eta_str = ''
         if eta:
             eta_str = StreamUtils.durationToShortText(eta)
-            eta = '  ETA: ' + eta_str
-        speed = info.get('speed') or ''
+            eta = "  ETA: " + eta_str
+        speed = info.get("speed") or ""
         speed_str = ''
         if speed:
             speed_str = StreamUtils.simpleSize(speed) + 's'
-            speed = '  ' + speed_str
-        status = '%s%s:' % (info.get('status', '?').title(), pct)
+            speed = "  " + speed_str
+        status = "%s%s:" % (info.get("status", "?").title(), pct)
         text = CallbackMessage(status + eta + speed, pct_val, eta_str, speed_str, info)
         ok = self.showMessage(text)
         if not ok:
-            util.LOG('Download canceled')
+            util.LOG("Download canceled")
             raise DownloadCanceledException()
 
     def clearDownloadParams(self):
@@ -304,14 +304,14 @@ class YoutubeDLWrapper(youtube_dl.YoutubeDL):
 
     def report_warning(self, message):
         # overidden to get around error on missing stderr.isatty attribute
-        _msg_header = 'WARNING:'
-        warning_message = '%s %s' % (_msg_header, message)
+        _msg_header = "WARNING:"
+        warning_message = "%s %s" % (_msg_header, message)
         self.to_stderr(warning_message)
 
     def report_error(self, message, tb=None):
         # overidden to get around error on missing stderr.isatty attribute
-        _msg_header = 'ERROR:'
-        error_message = '%s %s' % (_msg_header, message)
+        _msg_header = "ERROR:"
+        error_message = "%s %s" % (_msg_header, message)
         self.trouble(error_message, tb)
 
 

@@ -25,13 +25,13 @@ class PlayMonitor(xbmc.Player):
             pass
 
         xbmcgui.Window(10000).setProperty(
-            'script.module.youtube.dl_VALID', valid)
+            "script.module.youtube.dl_VALID", valid)
 
 
 def showOptions(main=None):
     w = OptionsDialog(
-        'script-module-youtube-dl-options_dialog.xml',
-        util.ADDON.getAddonInfo('path'), 'main', '720p', main=main
+        "script-module-youtube-dl-options_dialog.xml",
+        util.ADDON.getAddonInfo("path"), "main", "720p", main=main
     )
     w.doModal()
     del w
@@ -39,7 +39,7 @@ def showOptions(main=None):
 
 class OptionsDialog(xbmcgui.WindowXMLDialog):
     def __init__(self, *args, **kwargs):
-        self.main = kwargs.get('main')
+        self.main = kwargs.get("main")
         self.player = PlayMonitor()
         self.player.setVideoValidity()
 
@@ -59,7 +59,7 @@ class OptionsDialog(xbmcgui.WindowXMLDialog):
 class main():
     def __init__(self):
         arg = self.getArg()
-        if arg == 'INFO':
+        if arg == "INFO":
             self.showInfo()
         else:
             showOptions(self)
@@ -68,10 +68,10 @@ class main():
         return sys.argv[-1]
 
     def downloadPlaying(self):
-        title = xbmc.getInfoLabel('Player.Title')
-        # xbmc.getInfoLabel('Player.Filenameandpath')
+        title = xbmc.getInfoLabel("Player.Title")
+        # xbmc.getInfoLabel("Player.Filenameandpath")
         url = xbmc.Player().getPlayingFile()
-        thumbnail = xbmc.getInfoLabel('Player.Art(thumb)')
+        thumbnail = xbmc.getInfoLabel("Player.Art(thumb)")
         extra = None
         if '|' in url:
             url, extra = url.rsplit('|', 1)
@@ -83,7 +83,7 @@ class main():
             try:
                 import urlparse
                 for k, v in urlparse.parse_qsl(extra):
-                    if k.lower() == 'user-agent':
+                    if k.lower() == "user-agent":
                         info['user_agent'] = v
                         break
             except:
@@ -123,8 +123,8 @@ class main():
         from lib import youtube_dl
 
         line1 = T(32043).format(
-            '[B]{0}[/B]'.format(util.ADDON.getAddonInfo('version')))
+            '[B]{0}[/B]'.format(util.ADDON.getAddonInfo("version")))
         version = youtube_dl.version.__version__
-        line2 = T(32044).format('[B]{0}[/B]'.format(version))
+        line2 = T(32044).format("[B]{0}[/B]".format(version))
 
-        xbmcgui.Dialog().ok(T(32045), line1, '', line2)
+        xbmcgui.Dialog().ok(T(32045), line1, "", line2)

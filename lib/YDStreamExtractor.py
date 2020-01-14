@@ -1,7 +1,6 @@
-import urllib
 import os
-import urllib.parse as urlparse
-import http.client as httplib
+import urllib.parse
+import http.client
 import time
 import xbmc
 
@@ -120,7 +119,7 @@ def _selectVideoQuality(r, quality=None):
             formatID = info['format_id']
             util.LOG(logBase.format(formatID, info.get('width', '?'), info.get('height', '?'), entry.get('title', '').encode('ascii', 'replace')), debug=True)
             if url.find("rtmp") == -1:
-                url += '|' + urllib.urlencode({'User-Agent': entry.get('user_agent') or YoutubeDLWrapper.std_headers['User-Agent']})
+                url += '|' + urllib.parse.urlencode({'User-Agent': entry.get('user_agent') or YoutubeDLWrapper.std_headers['User-Agent']})
             else:
                 url += ' playpath='+fdata['play_path']
             new_info = dict(entry)
@@ -146,7 +145,7 @@ def resolve_http_redirect(url, depth=0):
     if depth > 10:
         raise Exception("Redirected "+depth+" times, giving up.")
     o = urlparse.urlparse(url, allow_fragments=True)
-    conn = httplib.HTTPConnection(o.netloc)
+    conn = http.client.HTTPConnection(o.netloc)
     path = o.path
     if o.query:
         path += '?' + o.query
@@ -224,7 +223,7 @@ def _actualGetExtension(info):
     try:
         url = resolve_http_redirect(url)
         o = urlparse.urlparse(url, allow_fragments=True)
-        conn = httplib.HTTPConnection(o.netloc)
+        conn = http.client.HTTPConnection(o.netloc)
         conn.request("HEAD", o.path, headers={'User-Agent': YoutubeDLWrapper.std_headers['User-Agent']})
         res = conn.getresponse()
 

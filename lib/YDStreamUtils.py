@@ -19,14 +19,14 @@ T = util.T
 ###############################################################################
 def showMessage(heading, line1, line2=None, line3=None, bg=False):
     if bg:
-        icon = util.ADDON.getAddonInfo('icon')
+        icon = util.ADDON.getAddonInfo("icon")
         xbmcgui.Dialog().notification(heading, line1, icon=icon)
     else:
         xbmcgui.Dialog().ok(heading, line1, line2, line3)
 
 
 class xbmcDialogProgressBase:
-    def __init__(self, heading, line1='', line2='', line3='', update_callback=None):
+    def __init__(self, heading, line1="", line2="", line3="", update_callback=None):
         self.heading = heading
         self.line1 = line1
         self.line2 = line2
@@ -37,7 +37,7 @@ class xbmcDialogProgressBase:
         self.setRange()
         self.initDialog()
 
-    def initDialog(self): assert False, 'Not Implemented'
+    def initDialog(self): assert False, "Not Implemented"
 
     def __enter__(self):
         self.create(self.heading, self.line1, self.line2, self.line3)
@@ -53,13 +53,13 @@ class xbmcDialogProgressBase:
         self.range = end - start
 
     def recalculatePercent(self, pct):
-        # rint '%s - %s %s %s' % (pct,self.start,self.range,self.start + int((pct/100.0) * self.range))
+        # rint "%s - %s %s %s" % (pct,self.start,self.range,self.start + int((pct/100.0) * self.range))
         return self.start + int((pct / 100.0) * self.range)
 
-    def create(self, heading, line1='', line2='', line3=''):
+    def create(self, heading, line1="", line2="", line3=""):
         self.dialog.create(heading, line1, line2, line3)
 
-    def update(self, pct, line1='', line2='', line3=''):
+    def update(self, pct, line1="", line2="", line3=""):
         if self._iscanceled():
             return False
         pct = self.recalculatePercent(pct)
@@ -70,7 +70,7 @@ class xbmcDialogProgressBase:
         return True
 
     def _update(self, pct, line1, line2, line3):
-        assert False, 'Not Implemented'
+        assert False, "Not Implemented"
 
     def updateSimple(self, message):
         pct = 0
@@ -108,12 +108,12 @@ class xbmcDialogProgressBG(xbmcDialogProgressBase):
         for line in (line2, line3):
             if line:
                 lines.append(line)
-        return '  |  '.join(lines)
+        return "  |  ".join(lines)
 
     def initDialog(self):
         self.dialog = xbmcgui.DialogProgressBG()
 
-    def create(self, heading, line1='', line2='', line3=''):
+    def create(self, heading, line1="", line2="", line3=""):
         self.dialog.create(line1, self._condenseLines(line2, line3))
 
     def _update(self, pct, line1, line2, line3):
@@ -130,7 +130,7 @@ class xbmcDialogProgressBG(xbmcDialogProgressBase):
 
 
 class DownloadProgress(xbmcDialogProgress):
-    def __init__(self, heading=T(32004), line1=''):
+    def __init__(self, heading=T(32004), line1=""):
         xbmcDialogProgress.__init__(self, heading, line1=line1, update_callback=downloadProgressCallback)
 
     def __call__(self, info):
@@ -138,7 +138,7 @@ class DownloadProgress(xbmcDialogProgress):
 
 
 class DownloadProgressBG(xbmcDialogProgressBG):
-    def __init__(self, heading=T(32004), line1=''):
+    def __init__(self, heading=T(32004), line1=""):
         xbmcDialogProgressBG.__init__(self, heading, line1=line1, update_callback=downloadProgressCallbackBG)
 
     def __call__(self, info):
@@ -146,44 +146,44 @@ class DownloadProgressBG(xbmcDialogProgressBG):
 
 
 def downloadProgressCallback(prog, data):
-    if not hasattr(data, 'info'):
+    if not hasattr(data, "info"):
         return prog.update(0, T(32035), data)
-    line1 = os.path.basename(data.info.get('filename', ''))
+    line1 = os.path.basename(data.info.get("filename", ""))
     line2 = []
     if data.speedStr:
         line2.append(data.speedStr)
     if data.etaStr:
-        line2.append('{0}: {1}'.format(T(32001), data.etaStr))
+        line2.append("{0}: {1}".format(T(32001), data.etaStr))
     line2 = ' - '.join(line2)
     line3 = []
-    total = data.info.get('total_bytes')
+    total = data.info.get("total_bytes")
     if total:
-        line3.append('{0}: {1}'.format(T(32002), simpleSize(total)))
+        line3.append("{0}: {1}".format(T(32002), simpleSize(total)))
     downloaded = data.info.get('downloaded_bytes')
     if downloaded:
-        line3.append('{0}: {1}'.format(T(32003), simpleSize(downloaded)))
-    line3 = ' - '.join(line3)
+        line3.append("{0}: {1}".format(T(32003), simpleSize(downloaded)))
+    line3 = " - ".join(line3)
     return prog.update(data.percent or 0, line1, line2, line3)
 
 
 def downloadProgressCallbackBG(prog, data):
-    if not hasattr(data, 'info'):
+    if not hasattr(data, "info"):
         return prog.update(0, T(32035), data)
-    line1 = os.path.basename(data.info.get('filename', ''))
+    line1 = os.path.basename(data.info.get("filename", ""))
     line2 = []
     if data.speedStr:
         line2.append(data.speedStr)
     if data.etaStr:
-        line2.append('{0}: {1}'.format(T(32001), data.etaStr))
+        line2.append("{0}: {1}".format(T(32001), data.etaStr))
     line2 = '  -  '.join(line2)
     line3 = ''
-    downloaded = data.info.get('downloaded_bytes')
+    downloaded = data.info.get("downloaded_bytes")
     if downloaded:
-        total = data.info.get('total_bytes', 0)
+        total = data.info.get("total_bytes", 0)
         if total:
-            line3 = '({0}/{1})'.format(simpleSize(downloaded), simpleSize(total))
+            line3 = "({0}/{1})".format(simpleSize(downloaded), simpleSize(total))
         else:
-            line3 = '({0})'.format(simpleSize(downloaded))
+            line3 = "({0})".format(simpleSize(downloaded))
     return prog.update(data.percent or 0, line1, line2, line3)
 
 
@@ -202,18 +202,18 @@ def moveFile(file_path, dest_path, filename=None):
 
 def getDownloadPath(use_default=None):
     if use_default is None:
-        use_default = not util.getSetting('confirm_download_path', True)
-    path = util.getSetting('last_download_path', '')
+        use_default = not util.getSetting("confirm_download_path", True)
+    path = util.getSetting("last_download_path", "")
     if path:
         if not use_default:
             new = xbmcgui.Dialog().yesno(T(32005), T(32006), path, T(32007), T(32008), T(32009))
             if new:
                 path = ''
     if not path:
-        path = xbmcgui.Dialog().browse(3, T(32010), 'files', '', False, True)
+        path = xbmcgui.Dialog().browse(3, T(32010), "files", "", False, True)
     if not path:
         return
-    util.setSetting('last_download_path', path)
+    util.setSetting("last_download_path", path)
     return path
 
 
@@ -231,7 +231,7 @@ def simpleSize(size):
         p = math.pow(1024, i)
         s = round(size / p, 2)
     if (s > 0):
-        return '%s %s' % (s, SIZE_NAMES[i])
+        return "%s %s" % (s, SIZE_NAMES[i])
     else:
         return '0B'
 
@@ -243,18 +243,18 @@ def durationToShortText(seconds):
     """
     days = int(seconds / 86400)
     if days:
-        return '%sd' % days
+        return "%sd" % days
     left = seconds % 86400
     hours = int(left / 3600)
     if hours:
-        return '%sh' % hours
+        return "%sh" % hours
     left = left % 3600
     mins = int(left / 60)
     if mins:
-        return '%sm' % mins
+        return "%sm" % mins
     sec = int(left % 60)
     if sec:
-        return '%ss' % sec
+        return "%ss" % sec
     return '0s'
 
 
@@ -266,7 +266,7 @@ def play(path, preview=False):
     Plays the video specified by path.
     If preview is True plays in current skins preview or background.
     """
-    xbmc.executebuiltin('PlayMedia(%s,,%s)' % (path, preview and 1 or 0))
+    xbmc.executebuiltin("PlayMedia(%s,,%s)" % (path, preview and 1 or 0))
 
 
 def pause():
@@ -299,14 +299,14 @@ def control(command):
     """
     Send the command to the player.
     """
-    xbmc.executebuiltin('PlayerControl(%s)' % command)
+    xbmc.executebuiltin("PlayerControl(%s)" % command)
 
 
 def isPlaying():
     """
     Returns True if the player is playing video.
     """
-    return xbmc.getCondVisibility('Player.Playing') and xbmc.getCondVisibility('Player.HasVideo')
+    return xbmc.getCondVisibility("Player.Playing") and xbmc.getCondVisibility("Player.HasVideo")
 
 
 def playAt(path, h=0, m=0, s=0, ms=0):

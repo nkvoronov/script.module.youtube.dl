@@ -5,7 +5,7 @@ import binascii
 import xbmc
 from lib.yd_private_libs import util, servicecontrol, jsonqueue
 sys.path.insert(0, util.MODULE_PATH)
-import YDStreamExtractor  # noqa E402
+import lib.YDStreamExtractor as YDStreamExtractor # noqa E402
 import threading  # noqa E402
 import AddonSignals
 
@@ -15,7 +15,7 @@ class Service():
         self.downloadCount = 0
         self.controller = servicecontrol.ServiceControl()
 
-        AddonSignals.registerSlot('script.module.youtube.dl', 'DOWNLOAD_STOP', self.stopDownload)
+        AddonSignals.registerSlot("script.module.youtube.dl", "DOWNLOAD_STOP", self.stopDownload)
 
         self.start()
 
@@ -29,7 +29,7 @@ class Service():
                 return None
             dataJSON = binascii.unhexlify(dataHEX)
             self.downloadCount += 1
-            util.LOG('Loading from queue. #{0} this session'.format(self.downloadCount))
+            util.LOG("Loading from queue. #{0} this session".format(self.downloadCount))
             return json.loads(dataJSON)
         except:
             import traceback
@@ -38,17 +38,17 @@ class Service():
         return None
 
     def start(self):
-        if self.controller.status == 'ACTIVE':
+        if self.controller.status == "ACTIVE":
             return
 
         try:
-            self.controller.status = 'ACTIVE'
+            self.controller.status = "ACTIVE"
             self._start()
         finally:
-            self.controller.status = ''
+            self.controller.status = ""
 
     def _start(self):
-        util.LOG('DOWNLOAD SERVICE: START')
+        util.LOG("DOWNLOAD SERVICE: START")
         info = self.getNextQueuedDownload()
 
         while info and not xbmc.abortRequested:
@@ -61,6 +61,6 @@ class Service():
 
             info = self.getNextQueuedDownload()
 
-        util.LOG('DOWNLOAD SERVICE: FINISHED')
+        util.LOG("DOWNLOAD SERVICE: FINISHED")
 
 Service()
