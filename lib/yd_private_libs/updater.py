@@ -2,7 +2,7 @@
 import sys
 import util
 
-LATEST_URL = 'https://yt-dl.org/latest/youtube-dl.tar.gz'
+LATEST_URL = 'https://yt-dl.org/latest/youtube-dl-{0}.tar.gz'
 VERSION_URL = 'https://yt-dl.org/latest/version'
 
 def set_youtube_dl_importPath():
@@ -49,7 +49,7 @@ def updateCore(force=False):
             shutil.rmtree(extractedPath, ignore_errors=True)
             util.LOG('Old version removed')
 
-        urllib.urlretrieve(LATEST_URL,filename=archivePath)
+        urllib.urlretrieve(LATEST_URL.format(newVersion),filename=archivePath)
         with tarfile.open(archivePath,mode='r:gz') as tf:
             members = [m for m in tf.getmembers() if m.name.startswith('youtube-dl/youtube_dl')] #get just the files from the youtube_dl source directory
             tf.extractall(path=profile,members=members)
