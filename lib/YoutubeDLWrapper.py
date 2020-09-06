@@ -207,14 +207,14 @@ class YoutubeDLWrapper(youtube_dl.YoutubeDL):
                 util.ERROR("Error in callback. Removing.")
                 _CALLBACK = None
         else:
-            if xbmc.abortRequested:
+            if xbmc.Monitor().abortRequested():
                 raise Exception("abortRequested")
             # print msg.encode('ascii','replace')
         return True
 
     def progressCallback(self, info):
         global _DOWNLOAD_CANCEL
-        if xbmc.abortRequested or _DOWNLOAD_CANCEL:
+        if xbmc.Monitor().abortRequested() or _DOWNLOAD_CANCEL:
             _DOWNLOAD_CANCEL = False
             raise DownloadCanceledException("abortRequested")
         if _DOWNLOAD_DURATION:
