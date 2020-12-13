@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import xbmc, xbmcaddon
+import xbmc, xbmcvfs, xbmcaddon
 import os, sys, traceback, binascii
 
 IS_WEB = False
@@ -11,10 +11,10 @@ except ImportError:
 ADDON = xbmcaddon.Addon(id='script.module.youtube.dl')
 T = ADDON.getLocalizedString
 
-TMP_PATH = os.path.join(xbmc.translatePath(ADDON.getAddonInfo('profile')),'tmp')
+TMP_PATH = os.path.join(xbmcvfs.translatePath(ADDON.getAddonInfo('profile')),'tmp')
 if not os.path.exists(TMP_PATH): os.makedirs(TMP_PATH)
-QUEUE_FILE = os.path.join(xbmc.translatePath(ADDON.getAddonInfo('profile')),'download.queue')
-MODULE_PATH = os.path.join(xbmc.translatePath(ADDON.getAddonInfo('path')),'lib')
+QUEUE_FILE = os.path.join(xbmcvfs.translatePath(ADDON.getAddonInfo('profile')),'download.queue')
+MODULE_PATH = os.path.join(xbmcvfs.translatePath(ADDON.getAddonInfo('path')),'lib')
 
 
 DEBUG = ADDON.getSetting('debug') == 'true'

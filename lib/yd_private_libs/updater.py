@@ -10,7 +10,8 @@ def set_youtube_dl_importPath():
     #if not util.getSetting('use_update_version',True): return
     import os
     import xbmc
-    profile = xbmc.translatePath(util.ADDON.getAddonInfo('profile'))
+    import xbmcvfs
+    profile = xbmcvfs.translatePath(util.ADDON.getAddonInfo('profile'))
     youtube_dl_path = os.path.join(profile,'youtube-dl')
     if not os.path.exists(youtube_dl_path): return
     sys.path.insert(0,youtube_dl_path)
@@ -22,6 +23,7 @@ def saveVersion(version):
 def updateCore(force=False):
     if not force: return
     import xbmc
+    import xbmcvfs
     import os, urllib, urllib2
     import tarfile
 
@@ -39,7 +41,7 @@ def updateCore(force=False):
 
     util.LOG('Updating youtube_dl core to new version: {0}'.format(newVersion))
 
-    profile = xbmc.translatePath(util.ADDON.getAddonInfo('profile'))
+    profile = xbmcvfs.translatePath(util.ADDON.getAddonInfo('profile'))
     archivePath = os.path.join(profile,'youtube_dl.tar.gz')
     extractedPath = os.path.join(profile,'youtube-dl')
 
