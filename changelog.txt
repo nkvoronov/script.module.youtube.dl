@@ -1,3 +1,26 @@
+*** 21.303.0 ***
+
+Updated youtube-dl core to 2021.03.03
+Add merge capability (thanks jmzambon)
+
+*** 21.302.0 ***
+
+Updated youtube-dl core to 2021.03.02
+
+*** 21.204.0 ***
+
+Use xbmc.LOGINFO
+Updated youtube-dl core to 2021.02.04.1
+
+*** 20.616.0 ***
+
+Updated youtube-dl core to 2020.06.16.1
+Use new abortRequested API
+
+*** 20.324.0 ***
+
+Add Python 3 compatibility
+Updated youtube-dl core to 2020.03.24
 
 *** 19.912.1 ***
 

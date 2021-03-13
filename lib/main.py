@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 import sys
 from lib.yd_private_libs import util, servicecontrol, updater
-import xbmc
-import xbmcgui
+from kodi_six import xbmc
+from kodi_six import xbmcgui
 
 T = util.T
+PY3 = sys.version_info >= (3, 0)
+
 
 class PlayMonitor(xbmc.Player):
     def onPlayBackStarted(self):
@@ -25,13 +27,13 @@ class PlayMonitor(xbmc.Player):
             pass
 
         xbmcgui.Window(10000).setProperty(
-            "script.module.youtube.dl_VALID", valid)
+            'script.module.youtube.dl_VALID', valid)
 
 
 def showOptions(main=None):
     w = OptionsDialog(
-        "script-module-youtube-dl-options_dialog.xml",
-        util.ADDON.getAddonInfo("path"), "main", "720p", main=main
+        'script-module-youtube-dl-options_dialog.xml',
+        util.ADDON.getAddonInfo('path'), 'main', '720p', main=main
     )
     w.doModal()
     del w
@@ -39,7 +41,7 @@ def showOptions(main=None):
 
 class OptionsDialog(xbmcgui.WindowXMLDialog):
     def __init__(self, *args, **kwargs):
-        self.main = kwargs.get("main")
+        self.main = kwargs.get('main')
         self.player = PlayMonitor()
         self.player.setVideoValidity()
 
@@ -59,7 +61,7 @@ class OptionsDialog(xbmcgui.WindowXMLDialog):
 class main():
     def __init__(self):
         arg = self.getArg()
-        if arg == "INFO":
+        if arg == 'INFO':
             self.showInfo()
         else:
             showOptions(self)
@@ -68,10 +70,10 @@ class main():
         return sys.argv[-1]
 
     def downloadPlaying(self):
-        title = xbmc.getInfoLabel("Player.Title")
-        # xbmc.getInfoLabel("Player.Filenameandpath")
+        title = xbmc.getInfoLabel('Player.Title')
+        # xbmc.getInfoLabel('Player.Filenameandpath')
         url = xbmc.Player().getPlayingFile()
-        thumbnail = xbmc.getInfoLabel("Player.Art(thumb)")
+        thumbnail = xbmc.getInfoLabel('Player.Art(thumb)')
         extra = None
         if '|' in url:
             url, extra = url.rsplit('|', 1)
@@ -81,18 +83,21 @@ class main():
                 'id': int(time.time()), 'media_type': 'video'}
         if extra:
             try:
-                import urlparse
+                if PY3:
+                    import urllib.parse as urlparse
+                else:
+                    import urlparse
                 for k, v in urlparse.parse_qsl(extra):
-                    if k.lower() == "user-agent":
+                    if k.lower() == 'user-agent':
                         info['user_agent'] = v
                         break
-            except:
+            except Exception:
                 util.ERROR(hide_tb=True)
 
         util.LOG(repr(info), debug=True)
 
         from lib import YDStreamExtractor
-        YDStreamExtractor.handleDownload(info, bg=True)
+        YDStreamExtractor.handleDownload(info, filename=title, bg=True)
 
     def stopDownload(self):
         yes = xbmcgui.Dialog().yesno(T(32039), T(32040))
@@ -123,8 +128,8 @@ class main():
         from lib import youtube_dl
 
         line1 = T(32043).format(
-            '[B]{0}[/B]'.format(util.ADDON.getAddonInfo("version")))
+            '[B]{0}[/B]'.format(util.ADDON.getAddonInfo('version')))
         version = youtube_dl.version.__version__
-        line2 = T(32044).format("[B]{0}[/B]".format(version))
+        line2 = T(32044).format('[B]{0}[/B]'.format(version))
 
-        xbmcgui.Dialog().ok(T(32045), line1, "", line2)
+        xbmcgui.Dialog().ok(T(32045), line1 + ' ' + line2)
